@@ -268,5 +268,7 @@
         "pName": "Rue de la Paix"
       }
     }
-  ]
+  ],
+  "pStartSpaceIndex": 0,
+  "pJailSpaceIndex": 0
 }

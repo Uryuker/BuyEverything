@@ -1,6 +1,7 @@
 package fr.uryuker.games.buyeverything.spaces;
 
 import fr.uryuker.games.buyeverything.constants.IGameRules;
+import fr.uryuker.games.buyeverything.entities.CPlayer;
 
 public abstract class ASpace implements IGameRules {
 
@@ -10,8 +11,9 @@ public abstract class ASpace implements IGameRules {
 		this.setName(aName);
 	}
 	
-	public void doAction() {
+	public void doAction(CPlayer aPlayer) {
 		//TODO
+		System.out.println(this.toString());
 	}
 
 	public String getName() {

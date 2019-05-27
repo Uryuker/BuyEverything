@@ -99,7 +99,7 @@ public class CBoardGenerator implements IGameRules {
 	/**
 	 * Used for tests, pick your own players
 	 * 
-	 * @return QrrqyLis of users
+	 * @return ArrayList of users
 	 */
 	@Deprecated
 	public static ArrayList<CPlayer> initDefaultplayers(){
