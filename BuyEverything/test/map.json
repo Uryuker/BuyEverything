@@ -1,0 +1,272 @@
+{
+  "pSpaces": [
+    {
+      "type": "CStartSpace",
+      "properties": {
+        "pName": "Start"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 60,
+        "pName": "Boulevard de Belleville"
+      }
+    },
+    {
+      "type": "CCommunityChestSpace",
+      "properties": {
+        "pName": "Community Chest"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 60,
+        "pName": "Rue Lecourbe"
+      }
+    },
+    {
+      "type": "CTaxSpace",
+      "properties": {
+        "pName": "Impôts sur le revenu"
+      }
+    },
+    {
+      "type": "CRailwayStationSpace",
+      "properties": {
+        "pPrice": 200,
+        "pName": "Gare Montparnasse"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 100,
+        "pName": "Rue de Vaugirard"
+      }
+    },
+    {
+      "type": "CChanceSpace",
+      "properties": {
+        "pName": "Chance"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 100,
+        "pName": "Rue de Courcelles"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 100,
+        "pName": "Avenue de la République"
+      }
+    },
+    {
+      "type": "CJailSpace",
+      "properties": {
+        "pName": "Jail"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 140,
+        "pName": "Boulevard de la Villette"
+      }
+    },
+    {
+      "type": "CUtilitySpace",
+      "properties": {
+        "pPrice": 150,
+        "pName": "EDF"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 140,
+        "pName": "Avenue de Neuilly"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 160,
+        "pName": "Rue de Paradis"
+      }
+    },
+    {
+      "type": "CRailwayStationSpace",
+      "properties": {
+        "pPrice": 200,
+        "pName": "Gare de Lyon"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 180,
+        "pName": "Avenue Mozart"
+      }
+    },
+    {
+      "type": "CCommunityChestSpace",
+      "properties": {
+        "pName": "Community Chest"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 180,
+        "pName": "Boulevard Saint-Michel"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 200,
+        "pName": "Place Pigalle"
+      }
+    },
+    {
+      "type": "CFreeParkingSpace",
+      "properties": {
+        "pName": "Free Parking"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 220,
+        "pName": "Avenue Matignon"
+      }
+    },
+    {
+      "type": "CChanceSpace",
+      "properties": {
+        "pName": "Chance"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 220,
+        "pName": "Boulevard Malesherbes"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 240,
+        "pName": "Avenue Henri-Martin"
+      }
+    },
+    {
+      "type": "CRailwayStationSpace",
+      "properties": {
+        "pPrice": 200,
+        "pName": "Gare du Nord"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 260,
+        "pName": "Faubourg Saint-Honoré"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 260,
+        "pName": "Place de la Bourse"
+      }
+    },
+    {
+      "type": "CUtilitySpace",
+      "properties": {
+        "pPrice": 150,
+        "pName": "Compagnie des eaux"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 280,
+        "pName": "Rue La Fayette"
+      }
+    },
+    {
+      "type": "CGoToJailSpace",
+      "properties": {
+        "pName": "Go to Jail"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 300,
+        "pName": "Avenue de Breteuil"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 300,
+        "pName": "Avenue Foch"
+      }
+    },
+    {
+      "type": "CCommunityChestSpace",
+      "properties": {
+        "pName": "Community Chest"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 320,
+        "pName": "Boulevard des Capucines"
+      }
+    },
+    {
+      "type": "CRailwayStationSpace",
+      "properties": {
+        "pPrice": 200,
+        "pName": "Gare Saint-Lazare"
+      }
+    },
+    {
+      "type": "CChanceSpace",
+      "properties": {
+        "pName": "Chance"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 350,
+        "pName": "Avenue des Champs-Élysées"
+      }
+    },
+    {
+      "type": "CTaxSpace",
+      "properties": {
+        "pName": "Impôts sur Taxe de luxe"
+      }
+    },
+    {
+      "type": "CRoadSpace",
+      "properties": {
+        "pPrice": 400,
+        "pName": "Rue de la Paix"
+      }
+    }
+  ]
+}
