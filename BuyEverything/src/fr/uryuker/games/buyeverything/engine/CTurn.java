@@ -30,7 +30,11 @@ public class CTurn {
 	 */
 	private EGameActions displayMenu() {
 		StringBuilder wStringBuilder = new StringBuilder(); 
-		wStringBuilder.append("C'est à votre tour de jouer : ");
+		if(this.pThrowCount==0) {
+			wStringBuilder.append("C'est à votre tour de jouer : ");
+		} else {
+			wStringBuilder.append("C'est encore à vous ");
+		}
 		wStringBuilder.append(this.getPlayer().getName());
 		final CPlayer wPlayer = this.getPlayer();
 

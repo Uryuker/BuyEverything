@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import fr.uryuker.games.buyeverything.board.CBoard;
 import fr.uryuker.games.buyeverything.board.CDiceThrow;
 import fr.uryuker.games.buyeverything.cards.ACard;
+import fr.uryuker.games.buyeverything.constants.EPlayerStatus;
 import fr.uryuker.games.buyeverything.constants.IGameRules;
 import fr.uryuker.games.buyeverything.engine.CGame;
 public class CPlayer implements IGameRules{
@@ -16,6 +17,7 @@ public class CPlayer implements IGameRules{
 	private boolean pIsFirstBoardTurn = true;
 	private int pCurrentCase=0;
 	private final ArrayList<ACard> pHand= new ArrayList<>();
+	private EPlayerStatus pStatus = EPlayerStatus.IN_GAME;
 	
 	public CPlayer(String aName) {
 		this(aName, DEFAULT_AVATAR);
@@ -66,6 +68,10 @@ public class CPlayer implements IGameRules{
 		return this.pName;
 	}
 
+	public EPlayerStatus getStatus() {
+		return this.pStatus;
+	}
+
 	public void goToJail() {
 		this.setCurrentCase(CGame.getInstance().getBoard().getJailSpaceIndex());
 		this.setInJail(true);
@@ -78,17 +84,17 @@ public class CPlayer implements IGameRules{
 	public boolean isInJail() {
 		return this.pIsInJail;
 	}
-
+	
 	public boolean move(CDiceThrow aDiceThrow) {
 		this.addDicesResult(aDiceThrow.getResult());
-		if(this.getCurrentCase()==CGame.getInstance().getBoard().getJailSpaceIndex()) {
+		if(this.getCurrentCase()==CGame.getInstance().getBoard().getJailSpaceIndex() && this.isInJail()) {
 			return false;
 		} else {
 			CGame.getInstance().getBoard().getSpaceAt(this.pCurrentCase).doAction(this);
 			return true;
 		}
 	}
-	
+
 	private void passByStart() {
 		// TODO Auto-generated method stub
 		this.setFirstBoardTurn(false);
@@ -101,16 +107,16 @@ public class CPlayer implements IGameRules{
 
 	public void removeCardFromHand(ACard aCard) {
 		this.pHand.remove(aCard);
-	}
-
+	}	
+	
 	public void removeMoney(int pMoney) {
 		this.pMoney -= pMoney;
-	}	
+	}
 	
 	public void setAvatar(String pAvatar) {
 		this.pAvatar = pAvatar;
 	}
-	
+
 	public void setCurrentCase(int pCurrentCase) {
 		this.pCurrentCase = pCurrentCase;
 	}
@@ -129,6 +135,10 @@ public class CPlayer implements IGameRules{
 
 	public void setName(String pName) {
 		this.pName = pName;
+	}
+
+	public void setStatus(EPlayerStatus pStatus) {
+		this.pStatus = pStatus;
 	}
 	
 }

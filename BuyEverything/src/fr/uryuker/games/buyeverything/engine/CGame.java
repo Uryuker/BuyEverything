@@ -60,10 +60,11 @@ public class CGame implements IGameRules{
 	}
 	
 	private void playNextTurn(int aPlayerIndex) {
-		aPlayerIndex=aPlayerIndex%this.getPlayers().size();
+		aPlayerIndex=aPlayerIndex%(this.getPlayers().size());
 		new CTurn(this.getPlayers().get(aPlayerIndex));
+		aPlayerIndex++;
 		if(this.pGameStatus == EGameStatus.IN_PROGRESS) {
-			this.playNextTurn(aPlayerIndex++);
+			this.playNextTurn(aPlayerIndex);
 		}
 	} 
 	
