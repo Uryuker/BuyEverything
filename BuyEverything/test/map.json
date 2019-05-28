@@ -10,6 +10,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 60,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Boulevard de Belleville"
       }
     },
@@ -23,6 +25,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 60,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Rue Lecourbe"
       }
     },
@@ -36,6 +40,8 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Gare Montparnasse"
       }
     },
@@ -43,6 +49,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 100,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Rue de Vaugirard"
       }
     },
@@ -56,6 +64,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 100,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Rue de Courcelles"
       }
     },
@@ -63,6 +73,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 100,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue de la République"
       }
     },
@@ -76,6 +88,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 140,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Boulevard de la Villette"
       }
     },
@@ -83,6 +97,8 @@
       "type": "CUtilitySpace",
       "properties": {
         "pPrice": 150,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "EDF"
       }
     },
@@ -90,6 +106,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 140,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue de Neuilly"
       }
     },
@@ -97,6 +115,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 160,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Rue de Paradis"
       }
     },
@@ -104,6 +124,8 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Gare de Lyon"
       }
     },
@@ -111,6 +133,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 180,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue Mozart"
       }
     },
@@ -124,6 +148,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 180,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Boulevard Saint-Michel"
       }
     },
@@ -131,6 +157,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 200,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Place Pigalle"
       }
     },
@@ -144,6 +172,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 220,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue Matignon"
       }
     },
@@ -157,6 +187,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 220,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Boulevard Malesherbes"
       }
     },
@@ -164,6 +196,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 240,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue Henri-Martin"
       }
     },
@@ -171,6 +205,8 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Gare du Nord"
       }
     },
@@ -178,6 +214,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 260,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Faubourg Saint-Honoré"
       }
     },
@@ -185,6 +223,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 260,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Place de la Bourse"
       }
     },
@@ -192,6 +232,8 @@
       "type": "CUtilitySpace",
       "properties": {
         "pPrice": 150,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Compagnie des eaux"
       }
     },
@@ -199,6 +241,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 280,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Rue La Fayette"
       }
     },
@@ -212,6 +256,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 300,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue de Breteuil"
       }
     },
@@ -219,6 +265,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 300,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue Foch"
       }
     },
@@ -232,6 +280,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 320,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Boulevard des Capucines"
       }
     },
@@ -239,6 +289,8 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Gare Saint-Lazare"
       }
     },
@@ -252,6 +304,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 350,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Avenue des Champs-Élysées"
       }
     },
@@ -265,6 +319,8 @@
       "type": "CRoadSpace",
       "properties": {
         "pPrice": 400,
+        "pHouseCount": 0,
+        "pHasHotel": false,
         "pName": "Rue de la Paix"
       }
     }

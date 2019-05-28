@@ -18,45 +18,83 @@ public class CPropertySpace extends ASpace {
 		super(aName);
 		this.setPrice(aPrice);
 	}
+	private void addHotel(CPlayer aPlayer) {
+		this.setHasHotel(true);
+	}
 	public void addHouse() {
 		this.pHouseCount ++;
 	}
+
+	private void addHouse(CPlayer aPlayer) {
+		this.addHouse();
+	}
+	private void addLeaveMenu (StringBuilder aStringBuilder) {
+		// Show Leave action
+		aStringBuilder.append(System.getProperty("line.separator"));
+		aStringBuilder.append("    - ");
+		aStringBuilder.append(EBuyActions.SKIP.getValue());
+	}
+	private void applyActionFromString(String aAction, CPlayer aPlayer) {
+        switch(aAction) 
+        { 
+            case "Acheter": 
+                this.buyProperty(aPlayer);
+                break; 
+            case "Maison": 
+                this.addHouse(aPlayer);
+                break; 
+            case "Hotel": 
+                this.addHotel(aPlayer);
+                break; 
+            default: 
+            	return; 
+        } 
+	}
+	private void buyProperty(CPlayer aPlayer) {
+		aPlayer.removeMoney(this.pPrice);
+		this.setOwner(aPlayer);		
+	}
+	
 	private void displayMenu(CPlayer aPlayer) {
 		final StringBuilder wStringBuilder = new StringBuilder();
 		wStringBuilder.append(System.getProperty("line.separator"));
 		wStringBuilder.append("Merci de choisir votre action parmis les suivantes : ");
 		// Show buy action 
 		if(this.getOwner()==null) {
+			wStringBuilder.append(System.getProperty("line.separator"));
 			wStringBuilder.append("    - ");
 			wStringBuilder.append(EBuyActions.BUY.getValue());
+			this.addLeaveMenu(wStringBuilder);
 		}
 		// Else if it's the owner
 		else if(this.getOwner() == aPlayer ) {
 			if(this.pHouseCount==4 && !this.hasHotel()) {
+				wStringBuilder.append(System.getProperty("line.separator"));
 				wStringBuilder.append("    - ");
 				wStringBuilder.append(EBuyActions.BUY_HOTEL.getValue());
+				this.addLeaveMenu(wStringBuilder);
 			}
 			else if(this.pHouseCount<4){
+				wStringBuilder.append(System.getProperty("line.separator"));
 				wStringBuilder.append("    - ");
 				wStringBuilder.append(EBuyActions.BUY_HOUSE.getValue());
+				this.addLeaveMenu(wStringBuilder);
 			}
 		}
 		else {
-			this.pay(aPlayer);
+			final int wRent = this.getRent();
+			this.payToOwner(aPlayer, wRent);
+			wStringBuilder.append(System.getProperty("line.separator"));
+			wStringBuilder.append("Le proprio ( "+this.getOwner().getName()+" ) s'est saucé et vous a pris "+wRent+CURRENCY);
 		}
-		// Show Leave action
-		wStringBuilder.append("    - ");
-		wStringBuilder.append(EBuyActions.SKIP.getValue());
 
 		System.out.println(wStringBuilder.toString());	
 		final Scanner wScanner = new Scanner(System.in);
 		final String wAction = wScanner.nextLine();
-		wScanner.close();
+		this.applyActionFromString(wAction,aPlayer);
 	}
-
 	@Override
 	public void doAction(CPlayer aPlayer) {
-		//TODO
 		System.out.println(this.toString());
 		this.displayMenu(aPlayer);
 	}
@@ -66,17 +104,21 @@ public class CPropertySpace extends ASpace {
 	public CPlayer getOwner() {
 		return this.pOwner;
 	}
+	
 	public int getPrice() {
 		return this.pPrice;
+	}
+	
+	private int getRent() {
+		return 0;
 	}
 	
 	public boolean hasHotel() {
 		return this.pHasHotel;
 	}
-	
-	private void pay(CPlayer aPlayer) {
-		// TODO Auto-generated method stub
-		
+	private void payToOwner(CPlayer aPlayer, int aRent) {
+		aPlayer.removeMoney(aRent);
+		this.getOwner().addMoney(aRent);
 	}
 	public void setHasHotel(boolean pHasHotel) {
 		this.pHasHotel = pHasHotel;
@@ -90,6 +132,7 @@ public class CPropertySpace extends ASpace {
 	public void setPrice(int aPrice) {
 		this.pPrice = aPrice;
 	}
+	
 	@Override
 	public String toString() {
 		final StringBuilder wStringBuilder = new StringBuilder(); 

@@ -1,7 +1,10 @@
 package fr.uryuker.games.buyeverything.utils;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
@@ -89,9 +92,19 @@ public class CBoardGenerator implements IGameRules {
 		
 	}
 	
-	public static ArrayList<ASpace> getEmptyBoard(){
-		//TODO read the gson
-		return null;
+	public static CBoard getEmptyBoard(){
+		final GsonBuilder wBuilder = new GsonBuilder();
+		wBuilder.registerTypeAdapter(ASpace.class, new CGsonAdapter());
+		wBuilder.setPrettyPrinting();
+		final Gson wGson = wBuilder.create();
+		String wContent ="";
+		try {
+			wContent=new String ( Files.readAllBytes( Paths.get("./test/map.json") ) );
+		} catch (final IOException e) {
+			return new CBoard();
+		}
+		final CBoard wBoard = wGson.fromJson(wContent, CBoard.class);
+		return wBoard;
 	}
 	
 

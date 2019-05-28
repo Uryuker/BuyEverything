@@ -23,9 +23,13 @@ public class CGsonAdapter implements JsonSerializer<ASpace>, JsonDeserializer<AS
 	        final JsonElement element = jsonObject.get("properties");
 	 
 	        try {
-	            return context.deserialize(element, Class.forName("com.googlecode.whiteboard.model." + type));
-	        } catch (final ClassNotFoundException cnfe) {
-	            throw new JsonParseException("Unknown element type: " + type, cnfe);
+	            return context.deserialize(element, Class.forName("fr.uryuker.games.buyeverything.spaces." + type));
+	        } catch (final ClassNotFoundException e) {
+	        	try {
+		            return context.deserialize(element, Class.forName("fr.uryuker.games.buyeverything.spaces.corner." + type));
+		        } catch (final ClassNotFoundException cnfe) {
+		            throw new JsonParseException("Unknown element type: " + type, cnfe);
+		        }
 	        }
 	}
 

@@ -27,7 +27,9 @@ public class CGame implements IGameRules{
 	private ArrayList<CPlayer> pPlayers;
 	
 	public CGame() {
-		this.setBoard(new CBoard());
+		// used when generating map
+		// this.setBoard(new CBoard());
+		this.setBoard(CBoardGenerator.getEmptyBoard());
 		this.setPlayers(CBoardGenerator.initDefaultplayers());
 	}
 	
@@ -81,7 +83,6 @@ public class CGame implements IGameRules{
 	}
 
 	public void startGame() throws Exception {
-		// TODO Auto-generated method stub
 		this.checkPlayerCount();
 		//Shuffle players to randomize order
 		Collections.shuffle(this.pPlayers);
