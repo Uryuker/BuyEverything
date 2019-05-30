@@ -33,8 +33,8 @@ public class CGame implements IGameRules{
 	
 	public CGame() {
 		// used when generating map
-		// this.setBoard(new CBoard());
-		this.setBoard(CBoardGenerator.generateEmptyBoard());
+		this.setBoard(new CBoard());
+		this.getBoard().generate();
 		this.setPlayers(CBoardGenerator.initDefaultplayers());
 	}
 	

@@ -11,9 +11,7 @@ public class CRoadSpace extends CPropertySpace {
 	private int pHotelPrice=0;
 	private int pHousePrice=0;
 	private int[] pRent;
-	
-	
-	private CSpaceFamily pFamily;
+	private String pFamily;
 
 	public CRoadSpace(String aName) {
 		super(aName);
@@ -29,7 +27,7 @@ public class CRoadSpace extends CPropertySpace {
 		this.setHotelPrice(aHotelPrice);
 		this.setHousePrice(aHousePrice);
 		this.setMortgagePrice(aMortgagePrice);
-		this.setFamily(aFamily);
+		this.setFamily(aFamily.getName());
 		this.setRent(aRent);
 		aFamily.addSpace(this);
 	}
@@ -84,10 +82,6 @@ public class CRoadSpace extends CPropertySpace {
 		
 		}
 	}
-	public CSpaceFamily getFamily() {
-		return this.pFamily;
-	}
-
 
 	public int getHotelPrice() {
 		return this.pHotelPrice;
@@ -102,19 +96,21 @@ public class CRoadSpace extends CPropertySpace {
 		return this.pRent;
 	}
 	@Override
-	protected double getRent(CDiceThrow aDiceThrow) {
+	protected double getRent(CDiceThrow aDiceThrow, CPlayer aPlayer) {
 		if(this.hasHotel()) {
 			return this.pRent[5];
 		}
 		else {
-			return this.pRent[this.getHouseCount()];
+			if(this.getHouseCount()==0 && aPlayer.hasAllFamily(this)) {
+				return this.pRent[0]*2;
+			}
+			else {
+				return this.pRent[this.getHouseCount()];	
+			}
 		}
 	}
 	public boolean hasHotel() {
 		return this.pHasHotel;
-	}
-	public void setFamily(CSpaceFamily pFamily) {
-		this.pFamily = pFamily;
 	}
 	
 	public void setHasHotel(boolean pHasHotel) {
@@ -131,5 +127,13 @@ public class CRoadSpace extends CPropertySpace {
 	}
 	public void setRent(int[] pRent) {
 		this.pRent = pRent;
+	}
+
+	public String getFamily() {
+		return pFamily;
+	}
+
+	public void setFamily(String pFamily) {
+		this.pFamily = pFamily;
 	}
 }

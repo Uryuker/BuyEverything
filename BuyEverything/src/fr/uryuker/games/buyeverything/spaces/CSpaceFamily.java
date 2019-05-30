@@ -6,7 +6,7 @@ public class CSpaceFamily {
 
 	private String pName;
 	private String pHexColor;
-	private ArrayList<CPropertySpace> pSpaces;
+	private ArrayList<CPropertySpace> pSpaces= new ArrayList<>();
 	
 	public CSpaceFamily(String aName, String aHexColor){
 		this.setHexColor(aHexColor);

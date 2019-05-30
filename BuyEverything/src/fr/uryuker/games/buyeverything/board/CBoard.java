@@ -18,7 +18,7 @@ public class CBoard {
 	private int pStartSpaceIndex;
 	private int pJailSpaceIndex;
 	
-	public CBoard() {
+	public void generate() {
 		this.setSpaces(CBoardGenerator.generateEmptyBoard().getSpaces());
 		this.setFamilies(CBoardGenerator.generateEmptyBoard().getFamilies());
 	}

@@ -61,7 +61,7 @@ public class CPropertySpace extends ASpace {
 			this.addLeaveMenu(wStringBuilder);
 		}
 		else if(this.getOwner() != aPlayer &&!this.isMortgaged()){
-			final double wRent = this.getRent(aDiceThrow);
+			final double wRent = this.getRent(aDiceThrow, aPlayer);
 			this.payToOwner(aPlayer, wRent);
 			wStringBuilder.append(System.getProperty("line.separator"));
 			wStringBuilder.append("Le proprio ( "+this.getOwner().getName()+" ) s'est saucé et vous a pris "+wRent+CURRENCY);
@@ -97,7 +97,7 @@ public class CPropertySpace extends ASpace {
 	public int getPrice() {
 		return this.pPrice;
 	}
-	protected double getRent(CDiceThrow aDiceThrow) {
+	protected double getRent(CDiceThrow aDiceThrow, CPlayer aPlayer) {
 		return 0;
 	}
 	public boolean isMortgaged() {

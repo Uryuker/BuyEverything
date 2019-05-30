@@ -9,9 +9,22 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 60,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 50,
+        "pHousePrice": 50,
+        "pRent": [
+          2,
+          10,
+          30,
+          90,
+          160,
+          250
+        ],
+        "pFamily": "Brown",
+        "pPrice": 60,
+        "pMortgagePrice": 30,
+        "pIsMortgaged": false,
         "pName": "Boulevard de Belleville"
       }
     },
@@ -24,15 +37,29 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 60,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 50,
+        "pHousePrice": 50,
+        "pRent": [
+          4,
+          20,
+          60,
+          180,
+          320,
+          450
+        ],
+        "pFamily": "Brown",
+        "pPrice": 60,
+        "pMortgagePrice": 30,
+        "pIsMortgaged": false,
         "pName": "Rue Lecourbe"
       }
     },
     {
       "type": "CTaxSpace",
       "properties": {
+        "pCost": 200,
         "pName": "Impôts sur le revenu"
       }
     },
@@ -40,17 +67,30 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
-        "pHouseCount": 0,
-        "pHasHotel": false,
+        "pMortgagePrice": 100,
+        "pIsMortgaged": false,
         "pName": "Gare Montparnasse"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 100,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 50,
+        "pHousePrice": 50,
+        "pRent": [
+          6,
+          30,
+          90,
+          270,
+          400,
+          550
+        ],
+        "pFamily": "LightBlue",
+        "pPrice": 100,
+        "pMortgagePrice": 50,
+        "pIsMortgaged": false,
         "pName": "Rue de Vaugirard"
       }
     },
@@ -63,18 +103,44 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 100,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 50,
+        "pHousePrice": 50,
+        "pRent": [
+          6,
+          30,
+          90,
+          270,
+          400,
+          550
+        ],
+        "pFamily": "LightBlue",
+        "pPrice": 100,
+        "pMortgagePrice": 50,
+        "pIsMortgaged": false,
         "pName": "Rue de Courcelles"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 100,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 50,
+        "pHousePrice": 50,
+        "pRent": [
+          8,
+          40,
+          100,
+          300,
+          450,
+          60
+        ],
+        "pFamily": "LightBlue",
+        "pPrice": 100,
+        "pMortgagePrice": 60,
+        "pIsMortgaged": false,
         "pName": "Avenue de la République"
       }
     },
@@ -87,9 +153,22 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 140,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 100,
+        "pHousePrice": 100,
+        "pRent": [
+          10,
+          50,
+          150,
+          450,
+          625,
+          750
+        ],
+        "pFamily": "Pink",
+        "pPrice": 140,
+        "pMortgagePrice": 70,
+        "pIsMortgaged": false,
         "pName": "Boulevard de la Villette"
       }
     },
@@ -97,26 +176,52 @@
       "type": "CUtilitySpace",
       "properties": {
         "pPrice": 150,
-        "pHouseCount": 0,
-        "pHasHotel": false,
+        "pMortgagePrice": 50,
+        "pIsMortgaged": false,
         "pName": "EDF"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 140,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 100,
+        "pHousePrice": 100,
+        "pRent": [
+          10,
+          50,
+          150,
+          450,
+          625,
+          750
+        ],
+        "pFamily": "Pink",
+        "pPrice": 140,
+        "pMortgagePrice": 70,
+        "pIsMortgaged": false,
         "pName": "Avenue de Neuilly"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 160,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 100,
+        "pHousePrice": 100,
+        "pRent": [
+          12,
+          60,
+          180,
+          500,
+          700,
+          900
+        ],
+        "pFamily": "Pink",
+        "pPrice": 160,
+        "pMortgagePrice": 80,
+        "pIsMortgaged": false,
         "pName": "Rue de Paradis"
       }
     },
@@ -124,17 +229,30 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
-        "pHouseCount": 0,
-        "pHasHotel": false,
+        "pMortgagePrice": 100,
+        "pIsMortgaged": false,
         "pName": "Gare de Lyon"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 180,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 100,
+        "pHousePrice": 100,
+        "pRent": [
+          14,
+          70,
+          200,
+          550,
+          750,
+          950
+        ],
+        "pFamily": "Orange",
+        "pPrice": 180,
+        "pMortgagePrice": 90,
+        "pIsMortgaged": false,
         "pName": "Avenue Mozart"
       }
     },
@@ -147,18 +265,44 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 180,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 100,
+        "pHousePrice": 100,
+        "pRent": [
+          14,
+          70,
+          200,
+          550,
+          750,
+          950
+        ],
+        "pFamily": "Orange",
+        "pPrice": 180,
+        "pMortgagePrice": 90,
+        "pIsMortgaged": false,
         "pName": "Boulevard Saint-Michel"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 200,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 100,
+        "pHousePrice": 100,
+        "pRent": [
+          16,
+          80,
+          220,
+          600,
+          800,
+          1000
+        ],
+        "pFamily": "Orange",
+        "pPrice": 200,
+        "pMortgagePrice": 100,
+        "pIsMortgaged": false,
         "pName": "Place Pigalle"
       }
     },
@@ -171,9 +315,22 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 220,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 150,
+        "pHousePrice": 150,
+        "pRent": [
+          18,
+          90,
+          230,
+          700,
+          875,
+          1050
+        ],
+        "pFamily": "Red",
+        "pPrice": 220,
+        "pMortgagePrice": 110,
+        "pIsMortgaged": false,
         "pName": "Avenue Matignon"
       }
     },
@@ -186,18 +343,44 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 220,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 150,
+        "pHousePrice": 150,
+        "pRent": [
+          18,
+          90,
+          230,
+          700,
+          875,
+          1050
+        ],
+        "pFamily": "Red",
+        "pPrice": 220,
+        "pMortgagePrice": 110,
+        "pIsMortgaged": false,
         "pName": "Boulevard Malesherbes"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 240,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 150,
+        "pHousePrice": 150,
+        "pRent": [
+          20,
+          10,
+          300,
+          750,
+          925,
+          1100
+        ],
+        "pFamily": "Red",
+        "pPrice": 240,
+        "pMortgagePrice": 120,
+        "pIsMortgaged": false,
         "pName": "Avenue Henri-Martin"
       }
     },
@@ -205,26 +388,52 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
-        "pHouseCount": 0,
-        "pHasHotel": false,
+        "pMortgagePrice": 100,
+        "pIsMortgaged": false,
         "pName": "Gare du Nord"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 260,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 150,
+        "pHousePrice": 150,
+        "pRent": [
+          22,
+          110,
+          330,
+          800,
+          975,
+          1150
+        ],
+        "pFamily": "Yellow",
+        "pPrice": 260,
+        "pMortgagePrice": 130,
+        "pIsMortgaged": false,
         "pName": "Faubourg Saint-Honoré"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 260,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 150,
+        "pHousePrice": 150,
+        "pRent": [
+          22,
+          110,
+          330,
+          800,
+          975,
+          1150
+        ],
+        "pFamily": "Yellow",
+        "pPrice": 260,
+        "pMortgagePrice": 130,
+        "pIsMortgaged": false,
         "pName": "Place de la Bourse"
       }
     },
@@ -232,17 +441,30 @@
       "type": "CUtilitySpace",
       "properties": {
         "pPrice": 150,
-        "pHouseCount": 0,
-        "pHasHotel": false,
+        "pMortgagePrice": 50,
+        "pIsMortgaged": false,
         "pName": "Compagnie des eaux"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 280,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 150,
+        "pHousePrice": 150,
+        "pRent": [
+          24,
+          120,
+          360,
+          850,
+          1025,
+          1200
+        ],
+        "pFamily": "Yellow",
+        "pPrice": 280,
+        "pMortgagePrice": 140,
+        "pIsMortgaged": false,
         "pName": "Rue La Fayette"
       }
     },
@@ -255,18 +477,44 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 300,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 200,
+        "pHousePrice": 200,
+        "pRent": [
+          26,
+          130,
+          390,
+          900,
+          1100,
+          1275
+        ],
+        "pFamily": "Green",
+        "pPrice": 300,
+        "pMortgagePrice": 150,
+        "pIsMortgaged": false,
         "pName": "Avenue de Breteuil"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 300,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 200,
+        "pHousePrice": 200,
+        "pRent": [
+          26,
+          130,
+          390,
+          900,
+          1100,
+          1275
+        ],
+        "pFamily": "Green",
+        "pPrice": 300,
+        "pMortgagePrice": 150,
+        "pIsMortgaged": false,
         "pName": "Avenue Foch"
       }
     },
@@ -279,9 +527,22 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 320,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 200,
+        "pHousePrice": 200,
+        "pRent": [
+          28,
+          150,
+          450,
+          1000,
+          1200,
+          1400
+        ],
+        "pFamily": "Green",
+        "pPrice": 320,
+        "pMortgagePrice": 160,
+        "pIsMortgaged": false,
         "pName": "Boulevard des Capucines"
       }
     },
@@ -289,8 +550,8 @@
       "type": "CRailwayStationSpace",
       "properties": {
         "pPrice": 200,
-        "pHouseCount": 0,
-        "pHasHotel": false,
+        "pMortgagePrice": 100,
+        "pIsMortgaged": false,
         "pName": "Gare Saint-Lazare"
       }
     },
@@ -303,28 +564,58 @@
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 350,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 200,
+        "pHousePrice": 200,
+        "pRent": [
+          35,
+          175,
+          500,
+          1100,
+          1300,
+          1500
+        ],
+        "pFamily": "DarkBlue",
+        "pPrice": 350,
+        "pMortgagePrice": 175,
+        "pIsMortgaged": false,
         "pName": "Avenue des Champs-Élysées"
       }
     },
     {
       "type": "CTaxSpace",
       "properties": {
+        "pCost": 100,
         "pName": "Impôts sur Taxe de luxe"
       }
     },
     {
       "type": "CRoadSpace",
       "properties": {
-        "pPrice": 400,
         "pHouseCount": 0,
         "pHasHotel": false,
+        "pHotelPrice": 200,
+        "pHousePrice": 200,
+        "pRent": [
+          50,
+          200,
+          600,
+          1400,
+          1700,
+          2000
+        ],
+        "pFamily": "DarkBlue",
+        "pPrice": 400,
+        "pMortgagePrice": 200,
+        "pIsMortgaged": false,
         "pName": "Rue de la Paix"
       }
     }
   ],
+  "pFamilies": [],
+  "pCommunities": [],
+  "pChances": [],
   "pStartSpaceIndex": 0,
   "pJailSpaceIndex": 0
 }

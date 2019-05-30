@@ -44,26 +44,26 @@ public class CBoardGenerator implements IGameRules {
 
 		wChances.add(new CExitJailCard("Vous êtes libéré de prison .Cette carte peut être conservée jusqu'à ce qu'elle soit utilisée ou vendue.", ECardTypes.CHANCE, new int[0]));
 		
-		wChances.add(new CGoToJailCard("Allez en prison. Ne franchissez pas la case \"Départ\". Ne touchez pas 200"+CURRENCY, ECardTypes.CHANCE, new int[-3]));
+		wChances.add(new CGoToJailCard("Allez en prison. Ne franchissez pas la case \"Départ\". Ne touchez pas 200"+CURRENCY, ECardTypes.CHANCE, new int[0]));
 		
-		wChances.add(new CMoveCard("Reculez de 3 cases", ECardTypes.CHANCE, new int[-3]));
+		wChances.add(new CMoveCard("Reculez de 3 cases", ECardTypes.CHANCE, new int[]{-3}));
 
-		wChances.add(new CMoveToCard("Avancez jusqu'à la case \"Départ\"", ECardTypes.CHANCE, new int[1], "Start"));
-		wChances.add(new CMoveToCard("Rendez-vous Rue de la Paix", ECardTypes.CHANCE, new int[1], "Rue de la Paix"));
-		wChances.add(new CMoveToCard("Rendez-vous à l'Avenue Henri-Martin", ECardTypes.CHANCE, new int[1], "Avenue Henri-Martin"));
-		wChances.add(new CMoveToCard("Avancez au Bd de la Villette", ECardTypes.CHANCE, new int[1], "Boulevard de la Villette"));
-		wChances.add(new CMoveToCard("Allez à la gare de Lyon", ECardTypes.CHANCE, new int[1], "Gare de Lyon"));
+		wChances.add(new CMoveToCard("Avancez jusqu'à la case \"Départ\"", ECardTypes.CHANCE, new int[]{0}, "Start"));
+		wChances.add(new CMoveToCard("Rendez-vous Rue de la Paix", ECardTypes.CHANCE, new int[]{0}, "Rue de la Paix"));
+		wChances.add(new CMoveToCard("Rendez-vous à l'Avenue Henri-Martin", ECardTypes.CHANCE, new int[]{0}, "Avenue Henri-Martin"));
+		wChances.add(new CMoveToCard("Avancez au Bd de la Villette", ECardTypes.CHANCE, new int[]{0}, "Boulevard de la Villette"));
+		wChances.add(new CMoveToCard("Allez à la gare de Lyon", ECardTypes.CHANCE, new int[]{0}, "Gare de Lyon"));
 		
-		wChances.add(new CLoseMoneyCard("Amende pour excès de vitesse : "+CURRENCY, ECardTypes.CHANCE, new int[0]));
-		wChances.add(new CLoseMoneyCard("Payez les frais de scolarité : "+CURRENCY, ECardTypes.CHANCE, new int[0]));
-		wChances.add(new CLoseMoneyCard("Amende pour ivresse : "+CURRENCY, ECardTypes.CHANCE, new int[0]));
+		wChances.add(new CLoseMoneyCard("Amende pour excès de vitesse : 15"+CURRENCY, ECardTypes.CHANCE, new int[]{15}));
+		wChances.add(new CLoseMoneyCard("Payez les frais de scolarité : 150"+CURRENCY, ECardTypes.CHANCE, new int[]{150}));
+		wChances.add(new CLoseMoneyCard("Amende pour ivresse : 20"+CURRENCY, ECardTypes.CHANCE, new int[]{20}));
 
-		wChances.add(new CGetMoneyCard("La banque vous verse un dividende de "+CURRENCY, ECardTypes.CHANCE, new int[0]));
-		wChances.add(new CGetMoneyCard("Votre immeuble et votre prêt rapportent. Vous devez toucher "+CURRENCY, ECardTypes.CHANCE, new int[0]));
-		wChances.add(new CGetMoneyCard("Vous avez gagné le prix de mots croisés. Recevez "+CURRENCY, ECardTypes.CHANCE, new int[0]));
+		wChances.add(new CGetMoneyCard("La banque vous verse un dividende de 50"+CURRENCY, ECardTypes.CHANCE, new int[]{50}));
+		wChances.add(new CGetMoneyCard("Votre immeuble et votre prêt rapportent. Vous devez toucher 150"+CURRENCY, ECardTypes.CHANCE, new int[]{150}));
+		wChances.add(new CGetMoneyCard("Vous avez gagné le prix de mots croisés. Recevez 100"+CURRENCY, ECardTypes.CHANCE, new int[]{100}));
 
-		wChances.add(new CBuildingTaxCard("Vous êtes imposé pour les réparations de voirie a raison de : 4.000"+CURRENCY+" par maison et 11.500"+CURRENCY+" par hotel", ECardTypes.CHANCE, new int[0]));
-		wChances.add(new CBuildingTaxCard("Faites des réparations dans toutes vos maisons : 4.000"+CURRENCY+" par maison et 11.500"+CURRENCY+" par hotel", ECardTypes.CHANCE, new int[0]));
+		wChances.add(new CBuildingTaxCard("Vous êtes imposé pour les réparations de voirie a raison de : 40"+CURRENCY+" par maison et 115"+CURRENCY+" par hotel", ECardTypes.CHANCE, new int[]{40, 115}));
+		wChances.add(new CBuildingTaxCard("Faites des réparations dans toutes vos maisons : 25"+CURRENCY+" par maison et 100"+CURRENCY+" par hotel", ECardTypes.CHANCE, new int[] {25,100}));
 		
 		return wChances;
 		
@@ -73,26 +73,26 @@ public class CBoardGenerator implements IGameRules {
 		final ArrayList<ACard> wCommunities  = new ArrayList<>();
 		wCommunities.add(new CExitJailCard("Vous êtes libéré de prison .Cette carte peut être conservée jusqu'à ce qu'elle soit utilisée ou vendue.", ECardTypes.COMMUNITY_CHEST, new int[0]));
 		
-		wCommunities.add(new CGoToJailCard("Allez en prison. Ne franchissez pas la case \"Départ\". Ne touchez pas 200"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[-3]));
+		wCommunities.add(new CGoToJailCard("Allez en prison. Ne franchissez pas la case \"Départ\". Ne touchez pas 200"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
 		
-		wCommunities.add(new CMoveToCard("Placez-vous sur la case \" Départ\".", ECardTypes.COMMUNITY_CHEST, new int[0], "Start"));
-		wCommunities.add(new CMoveToCard("Retournez a Belleville", ECardTypes.COMMUNITY_CHEST, new int[-1], "Boulevard de Belleville"));
+		wCommunities.add(new CMoveToCard("Placez-vous sur la case \" Départ\".", ECardTypes.COMMUNITY_CHEST, new int[] {0}, "Start"));
+		wCommunities.add(new CMoveToCard("Retournez a Belleville", ECardTypes.COMMUNITY_CHEST, new int[]{-1}, "Boulevard de Belleville"));
 		
-		wCommunities.add(new CGetMoneyFromEveryoneCard("C'est votre jour anniversaire chaque joueur doit vous donner 50"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
+		wCommunities.add(new CGetMoneyFromEveryoneCard("C'est votre jour anniversaire chaque joueur doit vous donner 10"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{10}));
 
-		wCommunities.add(new CGetMoneyCard("Vous avez gagné le 2nd prix de beauté. Recevez "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CGetMoneyCard("Erreur de la banque en votre faveur recevez "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CGetMoneyCard("Recevez votre intérêt sur l'emprunt à 7%, "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CGetMoneyCard("Recevez votre revenu annuel "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CGetMoneyCard("Les contributions vous remboursent la somme de "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CGetMoneyCard("Vous héritez de "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CGetMoneyCard("La vente de votre stock vous rapporte "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
+		wCommunities.add(new CGetMoneyCard("Vous avez gagné le 2nd prix de beauté. Recevez 10"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{10}));
+		wCommunities.add(new CGetMoneyCard("Erreur de la banque en votre faveur recevez 200"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{200}));
+		wCommunities.add(new CGetMoneyCard("Recevez votre intérêt sur l'emprunt à 7%, 25"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{25}));
+		wCommunities.add(new CGetMoneyCard("Recevez votre revenu annuel 100"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{100}));
+		wCommunities.add(new CGetMoneyCard("Les contributions vous remboursent la somme de 20"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{20}));
+		wCommunities.add(new CGetMoneyCard("Vous héritez de 100"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{100}));
+		wCommunities.add(new CGetMoneyCard("La vente de votre stock vous rapporte 50"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{50}));
 
-		wCommunities.add(new CLoseMoneyOrDrawCard("Payez un amende de 1.000"+CURRENCY+" ou bien tirez un carte \"CHANCE\"", ECardTypes.COMMUNITY_CHEST, new int[0], ECardTypes.CHANCE));
+		wCommunities.add(new CLoseMoneyOrDrawCard("Payez un amende de 10"+CURRENCY+" ou bien tirez un carte \"CHANCE\"", ECardTypes.COMMUNITY_CHEST, new int[]{10}, ECardTypes.CHANCE));
 		
-		wCommunities.add(new CLoseMoneyCard("Payez l'hôpital : "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CLoseMoneyCard("Payez la note du médecin : "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
-		wCommunities.add(new CLoseMoneyCard("Payez votre police d'assurance s'élevant à "+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[0]));
+		wCommunities.add(new CLoseMoneyCard("Payez l'hôpital : 100"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{100}));
+		wCommunities.add(new CLoseMoneyCard("Payez la note du médecin : 50"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{50}));
+		wCommunities.add(new CLoseMoneyCard("Payez votre police d'assurance s'élevant à 50"+CURRENCY, ECardTypes.COMMUNITY_CHEST, new int[]{50}));
 		
 		return wCommunities;
 	}

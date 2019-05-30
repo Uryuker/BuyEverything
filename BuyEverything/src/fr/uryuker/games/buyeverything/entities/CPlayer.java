@@ -11,6 +11,8 @@ import fr.uryuker.games.buyeverything.constants.IGameRules;
 import fr.uryuker.games.buyeverything.engine.CGame;
 import fr.uryuker.games.buyeverything.spaces.ASpace;
 import fr.uryuker.games.buyeverything.spaces.CPropertySpace;
+import fr.uryuker.games.buyeverything.spaces.CRoadSpace;
+import fr.uryuker.games.buyeverything.spaces.CSpaceFamily;
 import fr.uryuker.games.buyeverything.spaces.corner.CGoToJailSpace;
 public class CPlayer implements IGameRules{
 
@@ -94,9 +96,24 @@ public class CPlayer implements IGameRules{
 		this.setCurrentCase(CGame.getInstance().getBoard().getJailSpaceIndex());
 		this.setInJail(true);
 	}
+	public boolean hasAllFamily(CRoadSpace cRoadSpace) {
+		final ArrayList<CSpaceFamily> wFamilies = CGame.getInstance().getBoard().getFamilies();
+		for(final CSpaceFamily wFamily :wFamilies) {
+			if(wFamily.getName().equals(cRoadSpace.getFamily())){
+				for(final ASpace wSpace : wFamily.getSpaces()) {
+					if(wSpace instanceof CRoadSpace && (((CRoadSpace)wSpace).getOwner()==null ||((CRoadSpace)wSpace).getOwner()==this )){
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
+	
 	public boolean isFirstBoardTurn() {
 		return this.pIsFirstBoardTurn;
 	}
+
 	public boolean isInJail() {
 		return this.pIsInJail;
 	}
@@ -124,19 +141,19 @@ public class CPlayer implements IGameRules{
 			return true;
 		}
 	}
-
+	
 	public boolean move(int aMoveValue) {
 		final CDiceThrow wDiceThrow = new CDiceThrow();
 		wDiceThrow.setResult(aMoveValue, 0);
 		wDiceThrow.setDouble(1, 0);
 		return this.move(wDiceThrow);
 	}
-	
+
 	private void passByStart() {
 		this.setFirstBoardTurn(false);
 		this.addMoney(200);
-	}
-
+	}	
+	
 	public void payToOwner(double wRent, CPlayer aOwner) {
 		if(wRent>this.getMoney()) {
 			this.removeMoney(wRent);
@@ -148,14 +165,14 @@ public class CPlayer implements IGameRules{
 			this.setBusted(aOwner);
 		}
 
-	}	
+	}
 	
 	public void playCard() {
 		final ACard wCard = this.pHand.get(0);
 		wCard.setInHand(false);
 		this.pHand.remove(0);
 	}
-	
+
 	public void removeCardFromHand(ACard aCard) {
 		this.pHand.remove(aCard);
 	}

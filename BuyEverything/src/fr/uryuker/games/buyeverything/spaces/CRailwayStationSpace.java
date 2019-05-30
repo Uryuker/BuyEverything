@@ -2,6 +2,7 @@ package fr.uryuker.games.buyeverything.spaces;
 
 import fr.uryuker.games.buyeverything.board.CDiceThrow;
 import fr.uryuker.games.buyeverything.engine.CGame;
+import fr.uryuker.games.buyeverything.entities.CPlayer;
 
 public class CRailwayStationSpace extends CPropertySpace{
 
@@ -14,7 +15,7 @@ public class CRailwayStationSpace extends CPropertySpace{
 	}
 
 	@Override
-	protected double getRent(CDiceThrow aDiceThrow) {
+	protected double getRent(CDiceThrow aDiceThrow, CPlayer aPlayer) {
 		final int wNbStations = CGame.getInstance().getPropertyCountForUser(this.getOwner(), CRailwayStationSpace.class);
 		return 25*Math.pow(2,(wNbStations-1));
 	}
