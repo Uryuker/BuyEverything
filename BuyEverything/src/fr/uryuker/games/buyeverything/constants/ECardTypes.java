@@ -1,12 +1,11 @@
 package fr.uryuker.games.buyeverything.constants;
 
-public enum EGameActions implements IGameRules {
-	THROW_DICES("Lancer les dés"),
-	PAY("Payer 50"+CURRENCY+" pour sortir au prochain tour"),
-	PLAY_CARD("Jouer une carte sortie de prison");
+public enum ECardTypes {
+	CHANCE("Chance"),
+	COMMUNITY_CHEST("Caisse de Communauté");
 	
-	public static EGameActions getEnum(String aValue) {
-        for(final EGameActions wValue : values()) {
+	public static ECardTypes getEnum(String aValue) {
+        for(final ECardTypes wValue : values()) {
 			if(wValue.getValue().equalsIgnoreCase(aValue)) {
 				return wValue;
 			}
@@ -16,7 +15,7 @@ public enum EGameActions implements IGameRules {
 
 	private String pValue;
 	
-	EGameActions(String aValue) {
+	ECardTypes(String aValue) {
         this.pValue = aValue;
     }
 

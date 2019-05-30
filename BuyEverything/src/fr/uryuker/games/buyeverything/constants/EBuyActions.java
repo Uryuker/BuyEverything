@@ -2,6 +2,7 @@ package fr.uryuker.games.buyeverything.constants;
 
 public enum EBuyActions {
 	BUY("Acheter la propriété (Acheter)"),
+	BID("Mettre la propriété aux enchères (Enchere)"),
 	SKIP("Passer sans acheter (Passer)"),
 	BUY_HOUSE("Acheter une maison (Maison)"),
 	BUY_HOTEL("Acheter un hôtel (Hotel)");

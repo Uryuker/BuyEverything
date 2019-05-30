@@ -12,7 +12,6 @@ public abstract class ASpace implements IGameRules {
 	}
 	
 	public void doAction(CPlayer aPlayer) {
-		//TODO
 		System.out.println(this.toString());
 	}
 

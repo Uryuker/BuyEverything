@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 import fr.uryuker.games.buyeverything.board.CDiceThrow;
 import fr.uryuker.games.buyeverything.constants.EGameActions;
+import fr.uryuker.games.buyeverything.constants.IGameRules;
 import fr.uryuker.games.buyeverything.entities.CPlayer;
 
-public class CTurn {
+public class CTurn implements IGameRules {
 
 	private CPlayer pPlayer;
 	private int pThrowCount=0;
@@ -43,6 +44,7 @@ public class CTurn {
 		System.out.println(wStringBuilder.toString());	
 		final Scanner sc = new Scanner(System.in);
 		sc.nextLine();
+		sc.close();
 		if(wPlayer.isInJail() && !wPlayer.getHand().isEmpty()) {
 			return this.getUserAction();			
 		}
@@ -68,6 +70,9 @@ public class CTurn {
 		else if(wAction == EGameActions.PLAY_CARD) {
 			this.playCard();
 		}
+		else if(wAction == EGameActions.PAY) {
+			this.payToExitJail();
+		}
 	}
 
 
@@ -92,6 +97,7 @@ public class CTurn {
 		wStringBuilder.append(System.getProperty("line.separator"));
 		wStringBuilder.append("Merci de choisir votre action parmis les suivantes : ");
 		for(final EGameActions wValue : EGameActions.values()) {
+			wStringBuilder.append(System.getProperty("line.separator"));
 			wStringBuilder.append("    - ");
 			wStringBuilder.append(wValue.getValue());
 		}
@@ -100,6 +106,13 @@ public class CTurn {
 		final String wAction = wScanner.nextLine();
 		wScanner.close();
 		return EGameActions.getEnum(wAction);
+	}
+
+
+	private void payToExitJail() {
+		this.pPlayer.setInJail(false);
+		this.pPlayer.removeMoney(EXIT_JAIL_PRICE);
+		
 	}
 
 	private void playCard() {
